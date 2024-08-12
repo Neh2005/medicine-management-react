@@ -1,0 +1,77 @@
+/* PostListItem.css */
+
+/* Container for each post item */
+.post-list-item {
+    margin-bottom: 20px; /* Space between individual post items */
+    padding: 15px;
+    border: 1px solid #ddd; /* Light border around post items */
+    border-radius: 12px; /* Rounded corners */
+    background-color: #fff; /* White background for post items */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: box-shadow 0.3s ease-in-out; /* Smooth shadow transition */
+}
+
+/* Header of the post item */
+.post-list-item-header {
+    border-bottom: 1px solid #ddd; /* Divider line */
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+/* Body of the post item */
+.post-list-item-body {
+    padding: 10px 0;
+}
+
+/* Style for buttons inside each post item */
+.post-list-item-buttons {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    margin-top: 10px;
+}
+
+/* Ensure button styling matches ListMedicines */
+.post-list-item-buttons .btn {
+    padding: 10px 15px; /* Adjust padding for consistency */
+    font-size: 14px; /* Font size for readability */
+    border-radius: 4px; /* Slightly rounded corners */
+    text-align: center; /* Center text alignment */
+    transition: background-color 0.2s ease, transform 0.2s ease; /* Smooth button transitions */
+}
+
+/* Button specific styles */
+.btn-info {
+    background-color: #17a2b8; /* Info button color */
+    border-color: #17a2b8; /* Border color */
+    color: white; /* Text color */
+}
+
+.btn-info:hover {
+    background-color: #138496; /* Darker shade for hover */
+    border-color: #117a8b; /* Darker border color on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.btn-warning {
+    background-color: #ffc107; /* Warning button color */
+    border-color: #ffc107; /* Border color */
+    color: black; /* Text color */
+}
+
+.btn-warning:hover {
+    background-color: #e0a800; /* Darker shade for hover */
+    border-color: #d39e00; /* Darker border color on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.btn-danger {
+    background-color: #dc3545; /* Danger button color */
+    border-color: #dc3545; /* Border color */
+    color: white; /* Text color */
+}
+
+.btn-danger:hover {
+    background-color: #c82333; /* Darker shade for hover */
+    border-color: #bd2130; /* Darker border color on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}

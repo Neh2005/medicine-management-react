@@ -1,0 +1,104 @@
+/* Container for the list of medicines (formerly posts-container) */
+.list-medicines-container {
+    margin-top: 20px;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the button link, with no underline */
+.no-underline {
+    text-decoration: none; /* Remove underline */
+}
+
+.no-underline.btn {
+    display: inline-block; /* Ensure it behaves like a button */
+    padding: 10px 20px; /* Adjust padding to your preference */
+    font-size: 16px; /* Font size for the button text */
+    border-radius: 4px; /* Round the corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Info button styling */
+.no-underline.btn-info {
+    background-color: #17a2b8; /* Info button color */
+    border-color: #17a2b8; /* Border color */
+    color: white; /* Text color */
+}
+
+.no-underline.btn-info:hover {
+    background-color: #138496; /* Darker shade for hover */
+    border-color: #117a8b; /* Darker border color on hover */
+}
+
+/* Style for individual medicine items (formerly post-item) */
+.post-item {
+    margin-bottom: 20px; /* Space between individual items */
+    padding: 15px;
+    border: 1px solid #ddd; /* Light border around items */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #fff; /* White background for items */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Subtle shadow for better separation */
+}
+
+/* Specific button styling for the Search button */
+.btn-green {
+    background-color: #28a745; /* Green background */
+    border-color: #28a745; /* Green border */
+    color: white; /* White text */
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 16px; /* Font size */
+    border-radius: 4px; /* Slightly rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-align: center; /* Center text alignment */
+}
+
+.btn-green:hover {
+    background-color: #218838; /* Darker green for hover */
+    border-color: #1e7e34; /* Darker border color on hover */
+}
+
+/* Ensure that buttons inside each item (formerly post) are aligned */
+.post-item .post-buttons {
+    display: flex;
+    justify-content: flex-start; /* Align buttons to the left */
+    gap: 10px; /* Space between buttons */
+}
+
+/* Style for buttons */
+.btn-custom {
+    padding: 10px 15px; /* Adjust padding for a consistent button size */
+    font-size: 16px; /* Font size for readability */
+    border-radius: 5px; /* Slightly rounded corners */
+}
+
+/* Specific button colors */
+.btn-edit {
+    background-color: #007bff; /* Blue background for edit */
+    color: #fff;
+}
+
+.btn-edit:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.btn-delete {
+    background-color: #dc3545; /* Red background for delete */
+    color: #fff;
+}
+
+.btn-delete:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+.btn-view {
+    background-color: #17a2b8; /* Teal background for view */
+    color: #fff;
+}
+
+.btn-view:hover {
+    background-color: #138496; /* Darker teal on hover */
+}

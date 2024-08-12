@@ -1,0 +1,65 @@
+/* ViewMedicine.css */
+
+/* Container for the view medicine page */
+.view-medicine-container {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 100vh; /* Full viewport height */
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background color */
+}
+
+/* Card to display the medicine details */
+.view-medicine-card {
+    width: 100%;
+    max-width: 600px; /* Max width of the card */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    background-color: #ffffff; /* White background for the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: left; /* Align text to the left */
+}
+
+/* Centered title */
+.view-medicine-card h1 {
+    margin-bottom: 20px;
+    color: #333; /* Dark text color */
+}
+
+/* Form group for each field */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Label styling */
+.form-group label {
+    display: block; /* Block display for labels */
+    font-weight: bold; /* Bold text for labels */
+    margin-bottom: 5px; /* Space below label */
+    color: #555; /* Slightly lighter color for labels */
+}
+
+/* Styling for text paragraphs */
+.form-group p {
+    margin: 0; /* Remove default margin */
+    font-size: 16px; /* Font size for readability */
+    color: #333; /* Dark text color */
+}
+
+/* Button styling */
+.btn-secondary {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    background-color: #6c757d; /* Secondary button color */
+    color: white; /* White text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.2s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}

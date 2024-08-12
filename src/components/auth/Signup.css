@@ -1,0 +1,76 @@
+/* Signup.css */
+
+/* Container for the form */
+.register-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Full viewport height */
+    background-color: #f5f5f5; /* Light background color */
+}
+
+/* Form styling */
+.register-form {
+    width: 100%;
+    max-width: 600px; /* Maximum width of the form */
+    padding: 20px;
+    background-color: #fff; /* White background for the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+/* Heading in the form */
+.register-form h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Label styling */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Input field styling */
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensure padding and border are included in total width */
+}
+
+/* Button styling */
+.register-btn-primary {
+    width: 100%; /* Set width to 200px */
+    padding: 12px 20px; /* Increase padding for a larger button */
+    font-size: 18px; /* Increase font size for better readability */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Optional: round corners slightly */
+    background-color: #007bff; /* Primary button color */
+    color: white; /* Text color */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.register-btn-primary:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+
+/* Alert styling */
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}

@@ -1,0 +1,10 @@
+.button-link {
+    color: white; /* Button text color */
+    text-decoration: none; /* Remove underline */
+    outline: none; /* Remove focus outline */
+  }
+  
+  .button-link:focus {
+    outline: none; /* Remove focus outline when the button is focused */
+  }
+  

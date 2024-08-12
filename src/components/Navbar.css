@@ -1,0 +1,50 @@
+/* Basic Navbar styling */
+.navbar {
+  background-color: #333; /* Background color of the navbar */
+  padding: 10px; /* Padding around the navbar */
+}
+
+.navbar-list {
+  list-style-type: none; /* Remove bullet points from list items */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  display: flex; /* Flexbox for horizontal layout */
+  justify-content: center; /* Center items horizontally */
+}
+
+.navbar-list li {
+  margin: 0 15px; /* Horizontal spacing between items */
+}
+
+.navbar-list a {
+  text-decoration: none; /* Remove underline from links */
+  color: white; /* Text color for links */
+  font-size: 16px; /* Font size for links */
+  border: none; /* Ensure no borders are applied */
+}
+
+.navbar-list a:hover {
+  color: #ddd; /* Change text color on hover */
+}
+
+/* Specific styling for the logout link */
+.nav-link {
+  color: white; /* Ensure the logout link is white */
+  cursor: pointer; /* Change cursor to pointer for logout link */
+}
+
+.nav-link:hover {
+  color: #ddd; /* Change text color on hover for consistency */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .navbar-list {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+      align-items: center; /* Center items horizontally */
+  }
+
+  .navbar-list li {
+      margin: 10px 0; /* Vertical spacing between items */
+  }
+}
