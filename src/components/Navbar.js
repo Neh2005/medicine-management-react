@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
@@ -9,10 +9,11 @@ function Navbar() {
     const user = useSelector((store) => store.auth.user);
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     function logout() {
         if (user) {
-            axios.post('https://demo-blog.mashupstack.com/api/logout', {}, {
+            axios.post('https://medicalstore.mashupstack.com/api/logout', {}, {
                 headers: { 'Authorization': `Bearer ${user.token}` }
             }).then(() => {
                 dispatch(removeUser());
@@ -20,7 +21,6 @@ function Navbar() {
             }).catch(err => {
                 console.error('Failed to logout:', err);
                 if (err.response && err.response.status === 401) {
-                    // Token might be invalid or expired, force logout
                     dispatch(removeUser());
                     navigate('/Login');
                 } else {
@@ -30,20 +30,25 @@ function Navbar() {
         }
     }
 
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
     return (
         <nav className="navbar">
-            <ul className="navbar-list">
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/Actions">Medicine cart</Link></li>
-                <li><Link to="/Patientnames">Patient Names</Link></li>
+            <button className="menu-toggle" onClick={toggleMenu}>
+                &#9776; {/* Hamburger icon */}
+            </button>
+            <ul className={`navbar-list ${isMenuOpen ? 'active' : ''}`}>
+                <li><Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link></li>
+                <li><Link to="/Actions" onClick={() => setIsMenuOpen(false)}>Medicine cart</Link></li>
+                <li><Link to="/Patientnames" onClick={() => setIsMenuOpen(false)}>Patient Names</Link></li>
                 {user ? (
-                    <>
-                        <li><span className="nav-link" onClick={logout}>Logout</span></li>
-                    </>
+                    <li><span className="nav-link logout" onClick={logout}>Logout</span></li>
                 ) : (
                     <>
-                        <li><Link to="/Login">Login</Link></li>
-                        <li><Link to="/Signup">Sign up</Link></li>
+                        <li><Link to="/Login" onClick={() => setIsMenuOpen(false)}>Login</Link></li>
+                        <li><Link to="/Signup" onClick={() => setIsMenuOpen(false)}>Sign up</Link></li>
                     </>
                 )}
             </ul>

@@ -1,21 +1,33 @@
 import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { useAuth } from '../auth/AuthContext'; // Import the auth context hook
 import './PostListItem.css'; // Import the CSS file for PostListItem
 
 function PostListItem({ post, refresh }) {
+    const { user } = useAuth(); // Get the user from auth context
+
     // Function to delete a post
     const deletePost = () => {
+        if (!user) {
+            alert('User not authenticated');
+            return;
+        }
+
         if (window.confirm('Are you sure you want to delete this medicine?')) {
-            axios.delete(`https://medicalstore.mashupstack.com/api/medicine/${post.id}`)
-                .then(response => {
-                    alert(response.data.message);
-                    refresh(); // Refresh the list after deletion
-                })
-                .catch(error => {
-                    alert('There was an error deleting the medicine.');
-                    console.error('Error deleting medicine:', error);
-                });
+            axios.delete(`https://medicalstore.mashupstack.com/api/medicine/${post.id}`, {
+                headers: {
+                    Authorization: `Bearer ${user.token}` // Use token from auth context
+                }
+            })
+            .then(response => {
+                alert(response.data.message || 'Medicine deleted successfully');
+                refresh(); // Refresh the list after deletion
+            })
+            .catch(error => {
+                alert('There was an error deleting the medicine.');
+                console.error('Error deleting medicine:', error);
+            });
         }
     };
 

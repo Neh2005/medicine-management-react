@@ -1,50 +1,98 @@
-/* Basic Navbar styling */
+/* Navbar.css */
+
 .navbar {
-  background-color: #333; /* Background color of the navbar */
-  padding: 10px; /* Padding around the navbar */
+  background-color: #343a40; /* Dark background */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  color: #ffffff; /* Text color */
 }
 
 .navbar-list {
-  list-style-type: none; /* Remove bullet points from list items */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-  display: flex; /* Flexbox for horizontal layout */
-  justify-content: center; /* Center items horizontally */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 .navbar-list li {
-  margin: 0 15px; /* Horizontal spacing between items */
+  margin-right: 20px;
 }
 
-.navbar-list a {
-  text-decoration: none; /* Remove underline from links */
-  color: white; /* Text color for links */
-  font-size: 16px; /* Font size for links */
-  border: none; /* Ensure no borders are applied */
+.navbar-list a,
+.navbar-list .nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s, background-color 0.3s;
+  padding: 10px 15px; /* Consistent padding */
+  border-radius: 4px; /* Rounded corners */
+  display: flex;
+  align-items: center;
 }
 
-.navbar-list a:hover {
-  color: #ddd; /* Change text color on hover */
+.navbar-list a:hover,
+.navbar-list .nav-link:hover {
+  color: #000000; /* Text color on hover */
+  background-color: #ffc107; /* Background color on hover */
 }
 
-/* Specific styling for the logout link */
-.nav-link {
-  color: white; /* Ensure the logout link is white */
-  cursor: pointer; /* Change cursor to pointer for logout link */
+/* Remove dotted lines */
+.navbar-list a,
+.navbar-list .nav-link {
+  border: none;
 }
 
-.nav-link:hover {
-  color: #ddd; /* Change text color on hover for consistency */
+/* Logout button specific styling */
+.nav-link.logout {
+  cursor: pointer;
 }
 
-/* Media query for mobile devices */
+/* Responsive styling */
 @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .navbar-list {
-      flex-direction: column; /* Stack items vertically on smaller screens */
-      align-items: center; /* Center items horizontally */
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    background-color: #343a40;
+    position: absolute;
+    top: 50px; /* Adjust based on navbar height */
+    left: 0;
+    z-index: 1000;
+    padding: 0;
+  }
+
+  .navbar-list.active {
+    display: flex;
   }
 
   .navbar-list li {
-      margin: 10px 0; /* Vertical spacing between items */
+    margin: 0; /* No margin for dropdown items */
+    width: 100%;
+  }
+
+  .navbar-list a,
+  .navbar-list .nav-link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 15px; /* Increased padding for easier tapping */
+    border: none; /* Ensure no border */
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 24px;
+    color: #ffffff;
+    background: none;
+    border: none;
+    cursor: pointer;
   }
 }
