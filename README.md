@@ -1,3 +1,15 @@
+### Key Features
+
+- **CRUD Operations**: Users can add, edit, delete, and update details on medicines and patients.
+- **Interactive UI**: React-based interface for a smooth user experience.
+- **No Data Persistence**: Data is reset on page reload; for persistence, see the [backend repository](https://github.com/Neh2005/medical-management-system).
+
+## 📚 What I Learned
+
+- **React State Management**: Implemented dynamic state handling for CRUD operations.
+- **Component-Based UI**: Built reusable components for medicines and patient forms.
+- **Frontend-Only CRUD**: Gained insight into creating frontend-only applications, with scope for backend integration.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
