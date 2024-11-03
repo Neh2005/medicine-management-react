@@ -1,3 +1,5 @@
+# 🏥 Medical Management System - Frontend (React)
+
 ### Key Features
 
 - **CRUD Operations**: Users can add, edit, delete, and update details on medicines and patients.
